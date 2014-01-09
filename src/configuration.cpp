@@ -795,7 +795,7 @@ bool CConfig::BuildDeviceConfig(std::vector<CDevice*>& devices, CClientsHandler&
       return false;
 #endif
     }
-    else if (type == "lpd8806" || type == "ws2801")
+    else if (type == "lpd8806" || type == "ws2801" || type == "p9813")
     {
 #ifdef HAVE_LINUX_SPI_SPIDEV_H
       CDevice* device = NULL;
@@ -1247,6 +1247,8 @@ bool CConfig::BuildSPI(CDevice*& device, int devicenr, CClientsHandler& clients,
     device->SetType(LPD8806);
   else if (type == "ws2801")
     device->SetType(WS2801);
+  else if (type == "p9813")
+    device->SetType(P9813);
 
   return true;
 }

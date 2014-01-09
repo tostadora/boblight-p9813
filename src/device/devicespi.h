@@ -40,6 +40,10 @@ class CDeviceSPI : public CDevice
     uint8_t*     m_buff;
     int          m_buffsize;
     float        m_max;
+  private:
+    uint8_t CalculateChecksumP9813(uint8_t r, uint8_t g, uint8_t b);
+    void FillColorP9813(uint8_t r, uint8_t g, uint8_t b);
+    
 };
 
 

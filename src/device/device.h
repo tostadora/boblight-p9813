@@ -37,6 +37,7 @@
 #define WS2801    12
 #define LIGHTPACK 13
 #define AMBIODER  14
+#define P9813     15
 
 
 #include <string>
